@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getForecast } from "../../weather.service";
+import { getGeolocation } from "../../map.service";
+import Weather from "../Weather/Weather";
+import './output.css';
 
 function Output(search){
-  const [weather, setWeather] = useState([]);
+  const [loc, setLoc] = useState([]);
+
+  // current location points
 
   const options = {
     enableHighAccuracy: true,
@@ -25,34 +29,23 @@ function Output(search){
   
   navigator.geolocation.getCurrentPosition(success, error, options);
 
+  // searched location points
   useEffect((values)=>{
-    getForecast(values)
+    getGeolocation(values)
     .then((res) => res)
-    .then((data) => setWeather(data))
+    .then((data) => setLoc(data))
     .catch(err => console.log(err))
-  }, [])
-  console.log(weather);
+  }, [search.search])
+  console.log(loc);
 
-  function time(value){
-    let actTime = new Date(value * 1000).toISOString().slice(11, 16);
-    return actTime;
-  }
+  // getting weather for req location
 
   return(
-    <div>
-      <h2>{weather.current.temp}&deg; C</h2>
-        <div>
-          <h3>Real Feel:</h3> 
-          <p> {weather.current.feels_like}&deg; C</p>
-        </div>
-        <div>
-          <h3>Sunrise:</h3> 
-          <p> {time(weather.current.sunrise)} am</p>
-        </div>
-        <div>
-          <h3>Sunset:</h3>
-          {/* <p> {time(weather.current.sunrset)} pm</p> */}
-        </div>
+    <div className="weather">
+    <h1>Current Weather:</h1>
+    <Weather loc={loc} className="wCard"/>
+    <button>Hourly</button>
+    <button>Weekly</button>
     </div>
   )
 }

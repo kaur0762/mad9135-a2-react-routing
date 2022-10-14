@@ -1,0 +1,25 @@
+.inputForm{
+  margin-top: 2rem;
+}
+
+.inputForm input{
+  width: 40%;
+  max-width: 18rem;
+  height: 1.5rem;
+  border-color: #8AA6A3;
+  outline: none;
+  color: #10403B;
+  margin: 12px;
+}
+
+.inputForm button{
+  width: 20%;
+  max-width: 8rem;
+  height: 1.8rem;
+  background-color: #10403B;
+  color: #fff;
+  font-size: medium;
+  font-weight: 400;
+  border: none;
+  border-radius: 6px;
+}

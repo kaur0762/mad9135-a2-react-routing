@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Output from "../Output/Output";
+import './main.css';
 
 function Main(){
   const [search, setSearch] = useState("");

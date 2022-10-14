@@ -1,0 +1,17 @@
+.card {
+  background-color: #263B40;
+  max-width: 40rem;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 25px 25px 40px 0px #D5EFF2;
+  color: #D5EFF2;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.temp{
+  font-size: xx-large;
+}
