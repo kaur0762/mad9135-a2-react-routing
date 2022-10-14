@@ -5,15 +5,3 @@
 .weather h1{
   color: #466B73;
 }
-button{
-  width: 20%;
-  max-width: 8rem;
-  height: 1.8rem;
-  background-color: #10403B;
-  color: #fff;
-  font-size: medium;
-  font-weight: 400;
-  border: none;
-  border-radius: 6px;
-  margin: 2rem;
-}

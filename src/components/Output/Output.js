@@ -44,8 +44,6 @@ function Output(search){
     <div className="weather">
     <h1>Current Weather:</h1>
     <Weather loc={loc} className="wCard"/>
-    <button>Hourly</button>
-    <button>Weekly</button>
     </div>
   )
 }
