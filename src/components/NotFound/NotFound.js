@@ -1,14 +1,7 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React from 'react';
 
-function NavBar(){
-  return(
-    <>
-    <Link to="/">Home</Link>
-    <Link to="/hourly">Hourly</Link>
-    <Link to="/weekly">Weekly</Link>
-    </>
-  )
+function NotFound() {
+  return(<h1>404 error</h1>)
 }
 
-export default NavBar;
+export default NotFound;

@@ -1,0 +1,20 @@
+ul{
+  list-style: none;
+  margin: auto;
+}
+
+.hWcard{
+  background-color: #5D878C;
+  max-width: 40rem;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 25px 25px 40px 0px #D5EFF2;
+  color: #263B40;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-weight: bold;
+}

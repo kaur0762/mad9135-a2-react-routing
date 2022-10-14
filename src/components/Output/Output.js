@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getGeolocation } from "../../map.service";
 import Weather from "../Weather/Weather";
+import { getGeolocation } from "../../map.service";
 import './output.css';
 
 function Output(search){
@@ -42,7 +42,6 @@ function Output(search){
 
   return(
     <div className="weather">
-    <h1>Current Weather:</h1>
     <Weather loc={loc} className="wCard"/>
     </div>
   )

@@ -1,10 +1,29 @@
 import React from "react";
-import Main from '../Main/Main';
-import Output from "../Output/Output";
 
-function Home(search){
+function Home(weather){
+
+  function time(value){
+    let actTime = new Date(value * 1000).toISOString().slice(11, 16);
+    return actTime;
+  }
   return(
-    <Output search={search}/>
+    <div className="card">
+      <div className="temp">
+        <h2>{weather.current.temp}&deg; C</h2>
+      </div>
+        <div>
+          <h3>Real Feel:</h3> 
+          <p> {weather.current.feels_like}&deg; C</p>
+        </div>
+        <div>
+          <h3>Sunrise:</h3> 
+          <p> {time(weather.current.sunrise)} hours</p>
+        </div>
+        <div>
+          <h3>Sunset:</h3>
+          <p> {time(weather.current.sunset)} hours</p>
+        </div>
+    </div>
   )
 }
 
