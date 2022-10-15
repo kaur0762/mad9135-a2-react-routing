@@ -9,17 +9,24 @@ import {Routes, Route} from 'react-router-dom'
 import { getForecast } from "../../weather.service";
 import './weather.css';
 
-function Weather(loc){
+function Weather({location}){
   const [weather, setWeather] = useState([]);
+  console.log(location)
 
-  useEffect((values)=>{
-    getForecast(values)
+  useEffect(()=>{
+    getForecast(location)
     .then((res) => res)
     .then((data) => setWeather(data))
     .catch(err => console.log(err))
-  }, [loc])
-  console.log(weather);
+  }, [location])
 
+  if(weather.length === 0){
+    console.log("pages are loading");
+    return(
+      <h1>LOADING.......</h1>
+    )
+  }else {
+    console.log(weather);
   return(
     <>
       <NavBar />
@@ -30,7 +37,7 @@ function Weather(loc){
         <Route path="*" element={<NotFound />} />
       </Routes >
     </>
-  )
+  )}
 }
 
 export default Weather;
