@@ -4,7 +4,6 @@ import Weekly from '../Weekly/Weekly';
 import Hourly from '../Hourly/Hourly';
 import NavBar from '../NavBar/NavBar';
 import NotFound from '../NotFound/NotFound';
-// import {Routes, Route, useRoutes } from 'react-router-dom'
 import {Routes, Route} from 'react-router-dom'
 import { getForecast } from "../../weather.service";
 import './weather.css';
